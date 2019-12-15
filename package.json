@@ -6,7 +6,11 @@
     "ng": "ng",
     "nx": "nx",
     "start": "ng serve",
+    "start:hotornot": "ng serve hotornot",
+    "start:api": "ng serve api",
     "build": "ng build",
+    "build:hotornot": "ng build hotornot --aot --resourcesOutputPath=assets",
+    "build:api": "ng build api --optimization",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
@@ -25,7 +29,8 @@
     "update:check": "ng update",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "startserver:prod": "node dist/apps/api/main.js"
   },
   "private": true,
   "dependencies": {
