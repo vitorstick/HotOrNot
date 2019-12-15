@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Message } from '@hotornot/api-interfaces';
 import { MainService } from './services/main.service';
 import { Observable } from 'rxjs';

@@ -30,6 +30,16 @@ For this application
 
 `ng serve api` for the nestjs backend
 
+## For Deploy
+
+heroku login
+
+heroku ps:scale web=1
+
+git push heroku master
+
+For logs => heroku logs --tail
+
 ## Code scaffolding
 
 Run `ng g component my-component --project=my-app` to generate a new component.
