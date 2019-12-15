@@ -1,0 +1,36 @@
+.main-container {
+  .persons-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .persons-container--name {
+      color: #cacacb;
+      font-weight: 600;
+      font-size: 40px;
+      text-transform: capitalize;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+    .persons-container--image-container {
+      border-radius: 50%;
+      max-height: 600px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .image-container--img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

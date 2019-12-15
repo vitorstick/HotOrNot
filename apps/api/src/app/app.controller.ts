@@ -1,6 +1,6 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post, Body } from '@nestjs/common';
 
-import { Message } from '@hotornot/api-interfaces';
+import { Message, Vote, Person } from '@hotornot/api-interfaces';
 
 import { AppService } from './app.service';
 
@@ -11,5 +11,16 @@ export class AppController {
   @Get('hello')
   getData(): Message {
     return this.appService.getData();
+  }
+
+  @Get('persons')
+  getPersons() {
+    return this.appService.getPersons();
+  }
+
+  @Post('addVote')
+  addVote(@Body() vote: { vote: Vote }): Person {
+    // console.log('vote', vote.vote);
+    return this.appService.addVote(vote.vote);
   }
 }

@@ -1,0 +1,24 @@
+<main class="main-container">
+  <section class="persons-container">
+    <div class="persons-container--name">{{ person?.name }}</div>
+    <div class="persons-container--image-container">
+      <img class="image-container--img" [src]="person?.url" />
+    </div>
+  </section>
+  <section class="buttons-container">
+    <hotornot-button
+      [hotornot]="true"
+      [vote]="currentVote"
+      (voteEmitter)="doVote($event)"
+    ></hotornot-button>
+
+    <hotornot-stats [person]="person"></hotornot-stats>
+
+    <hotornot-button
+      [hotornot]="false"
+      [vote]="currentVote"
+      (voteEmitter)="doVote($event)"
+    ></hotornot-button>
+  </section>
+  <section class="results-container"></section>
+</main>

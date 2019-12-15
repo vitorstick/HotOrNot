@@ -1,0 +1,12 @@
+<div class="button-container">
+  <ng-container *ngIf="hotbutton">
+    <div class="simple-button simple-button--hot" (click)="hotClick()">
+      <img class="simple-button--img" src="assets/images/jalapeno.png" />
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!hotbutton">
+    <div class="simple-button simple-button--not" (click)="notClick()">
+      <img class="simple-button--img" src="assets/images/brocoli.png" />
+    </div>
+  </ng-container>
+</div>

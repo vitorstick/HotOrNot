@@ -1,0 +1,14 @@
+<section class="stats-container">
+  <div class="stats-container_votes upvotes">
+    <fa-icon [icon]="faThumbsUp"></fa-icon>
+    <span>
+      {{ person?.upvotes }}
+    </span>
+  </div>
+  <div class="stats-container_votes downvotes">
+    <fa-icon [icon]="faThumbsDown"></fa-icon>
+    <span>
+      {{ person?.downvotes }}
+    </span>
+  </div>
+</section>
