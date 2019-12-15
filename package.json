@@ -30,7 +30,7 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "prestart:prod": "ng build api --optimization && ng build hotornot --aot --resourcesOutputPath=assets",
+    "prestart:prod": "ng build api --optimization",
     "postinstall": "npm run prestart:prod",
     "start:prod": "node dist/apps/api/main.js"
   },
