@@ -24,6 +24,12 @@ Libraries are sharable across libraries and applications. They can be imported f
 
 Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
+For this application
+
+`ng serve hotornot` for the angular frontend
+
+`ng serve api` for the nestjs backend
+
 ## Code scaffolding
 
 Run `ng g component my-component --project=my-app` to generate a new component.
