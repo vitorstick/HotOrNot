@@ -12,12 +12,13 @@ async function bootstrap() {
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
 
-  const PORT = process.env.PORT || 3333;
+  console.log('process.env.port', process.env.port);
+
+  const PORT = process.env.port || 3333;
 
   await app.listen(PORT, () => {
     console.log('Listening at http://localhost:' + PORT + '/' + globalPrefix);
   });
-  console.log('App is running, server is listening on port ', app.get('port'));
 }
 
 bootstrap();
