@@ -30,7 +30,9 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "startserver:prod": "node dist/apps/api/main.js"
+    "prestart:prod": "ng build api --optimization",
+    "postinstall": "npm run prestart:prod",
+    "start:prod": "node dist/apps/api/main.js"
   },
   "private": true,
   "dependencies": {
