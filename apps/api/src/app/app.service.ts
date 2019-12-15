@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Message, Person, Vote } from '@hotornot/api-interfaces';
+import { ConfigService } from 'nestjs-config';
 
 @Injectable()
 export class AppService {
@@ -50,6 +51,11 @@ export class AppService {
 
   getData(): Message {
     return { message: 'Welcome to api!' };
+  }
+
+  constructor(private readonly config: ConfigService) {
+    this.config = config;
+    console.log('this.config', this.config.get('app.environment'));
   }
 
   getPersons(): Person[] {
